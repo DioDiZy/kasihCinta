@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Donasi</title>
+    <link rel="stylesheet" href="/assets/css/beranda-admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <header>
+            <h1>Admin Dashboard - Donasi</h1>
+        </header>
+        
+        <main>
+            <!-- Form untuk Tambah Donasi -->
+            <section class="form-section">
+                <h2>Tambah Donasi</h2>
+                <form id="donasiForm" enctype="multipart/form-data">
+                    <label for="donasiName">Nama:</label>
+                    <input type="text" id="donasiName" name="donasiName" placeholder="Masukkan nama" required>
+
+                    <label for="alamat">Alamat:</label>
+                    <input type="text" id="alamat" name="alamat" placeholder="Masukkan alamat" required>
+
+                    <label for="description">Deskripsi:</label>
+                    <textarea id="description" name="description" placeholder="Masukkan deskripsi" required></textarea>
+
+                    <label for="amount">Jumlah:</label>
+                    <input type="number" id="amount" name="amount" placeholder="Masukkan jumlah donasi" required>
+
+                    <label for="foto">Foto:</label>
+                    <input type="file" id="foto" name="foto" accept="image/*" required>
+
+                    <button type="submit">Tambah Donasi</button>
+                </form>
+            </section>
+            
+            <!-- Tabel Data Donasi -->
+            <section class="data-section">
+                <h2>Data Donasi</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nama</th>
+                            <th>Alamat</th>
+                            <th>Deskripsi</th>
+                            <th>Jumlah</th>
+                            <th>Foto</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="donasiTable">
+                        <!-- Data donasi akan dimasukkan di sini melalui JavaScript -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
